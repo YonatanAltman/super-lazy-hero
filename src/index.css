@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    padding: 0;
+    background-color: #EEE9DA;
+}
+
+.secondry {
+    background-color: #BDCDD6;
+}
+.text {
+    color: #93BFCF;
+
+}
+* {scroll-behavior: smooth;}
+a{
+    color: #93BFCF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all ease-in-out .2s;
+}
+a:hover{
+    background-color: #6096B4;
+}
+section{
+    min-height: 30vh;
+}
+button {
+    border-radius: 10px;
+    width: 150px;
+    background: #6096B4;
+    color: white;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+button:hover{
+    transform: scale(1.1) rotate(5deg);
+
+}
