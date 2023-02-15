@@ -1,3 +1,4 @@
+import './who-we-are.scss';
 export const onClick = (event: Event) => {
     console.log('User clicked');
 

@@ -1,3 +1,5 @@
+import './navigation.scss';
+
 const wrapper = (document.getElementsByClassName('navMenu')[0] as HTMLDivElement);// get initial position of the element
 const PADDING = 10;
 

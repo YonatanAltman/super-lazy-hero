@@ -1,20 +1,28 @@
+
+@import "style/colors";
+@import "style/button";
+
 body {
     font-family: 'Lora', monospace;
     padding: 0;
     margin: 0;
-    background-color: #EEE9DA;
+    background-color: $background-color;
 }
 .main-wrapper{
     margin: 0 10px;
 }
-.secondry {
-    background-color: #BDCDD6;
+.secondary {
+    background-color: $secondary-color;
 }
 
 section {
-    color: #023244;
+    color: $main-color;
     margin-left: 20vw;
     margin-top: 10vh;
+    .actions{
+        display: flex;
+        justify-content: end;
+    }
 
 }
 
@@ -29,7 +37,7 @@ section {
     top: 0;
     left: 0;
     padding: 10px;
-    background: white;
+    background: $white;
     width: 100vw;
 }
 
@@ -45,7 +53,7 @@ a {
     display: block;
     padding: 4px 0;
     font-family: Lato, sans-serif;
-    color: #1a5165;
+    color: $font-color;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
@@ -56,7 +64,7 @@ a {
     left: 0;
     width: 100%;
     height: 3px;
-    background: #3498db;
+    background: $font-color;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;
