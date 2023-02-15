@@ -23,6 +23,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "@material/dialog": "^14.0.0"
+    "@material/dialog": "^14.0.0",
+    "jspdf": "^2.5.1"
   }
 }
