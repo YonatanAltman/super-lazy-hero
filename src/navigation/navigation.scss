@@ -26,8 +26,9 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
+  font-size: 1.1rem;
 
-  &::after {
+  &:after {
     position: absolute;
     content: "";
     top: 100%;
