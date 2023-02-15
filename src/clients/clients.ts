@@ -1,13 +1,15 @@
-import {jsPDF} from "jspdf";
+// import {jsPDF} from "jspdf";
 import {OurClient, ourClients} from "./clients.interface";
-
+import {getPdfLib} from "./import.pdf";
 
 const onClick = (event: Event) => {
-    const doc = new jsPDF();
-    ourClients.forEach((client: OurClient, index: number) => {
-        doc.text(`${client.name} (${client.rate}): ${client.message}`, 10, 30 + (20 * index));
+    getPdfLib().then((jspdf) => {
+        const doc = new jspdf.jsPDF();
+        ourClients.forEach((client: OurClient, index: number) => {
+            doc.text(`${client.name} (${client.rate}): ${client.message}`, 10, 30 + (20 * index));
+        })
+        doc.save('a4.pdf');
     })
-    doc.save("a4.pdf");
 }
 
 
