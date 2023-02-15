@@ -1,3 +1,8 @@
+
+// Enum is part of the bundle 😱 !!!
+// export enum CurrencyEnum {
+//     USD,EUR,ILS
+// }
 export interface Price {
     amount: number;
     currency: 'USD' | 'EUR' | 'ILS';
