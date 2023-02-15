@@ -20,7 +20,7 @@ const dialogTemplate = `<div class="mdc-dialog">
       aria-describedby="my-dialog-content">
       <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
       <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
-     -->Choose a Ringtone<!--
+     -->Product's list<!--
    --></h2>
       <div class="mdc-dialog__content" id="my-dialog-content">
         <ul class="mdc-deprecated-list mdc-deprecated-list--avatar-list">
@@ -57,7 +57,8 @@ const onClick = (event: Event) => {
 
 
     dialog.listen('MDCDialog:closed', () => {
-        document.getElementById('my-dialog-content').removeChild(document.getElementById('my-prod-list'));
+        const _u = document.getElementById('my-prod-list');
+        _u && document.getElementById('my-dialog-content').removeChild(_u);
     });
 
 }
