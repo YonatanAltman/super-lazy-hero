@@ -49,9 +49,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
-}
-
-a::after {
+    &::after{
     position: absolute;
     content: "";
     top: 100%;
@@ -62,13 +60,15 @@ a::after {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.5s;
+
+    }
+    &:hover {
+        color: #95a5a6;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
 }
 
-a:hover {
-    color: #95a5a6;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
