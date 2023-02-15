@@ -1,4 +1,5 @@
 import './index.scss';
+
 console.log('Super hero');
 console.log("Hello, TypeScript and Webpack!");
 
@@ -8,3 +9,4 @@ import './navigation/navigation';
 import './products/products';
 
 import './clients/clients';
+import './contact-us/contact-us';
