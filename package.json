@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@material/dialog": "^14.0.0",
+    "axios": "^1.3.3",
     "jspdf": "^2.5.1",
     "pptxgenjs": "^3.11.0"
   }

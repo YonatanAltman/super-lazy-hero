@@ -10,3 +10,4 @@ import './products/products';
 
 import './clients/clients';
 import './contact-us/contact-us';
+import './footer/footer';

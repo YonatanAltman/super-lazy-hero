@@ -1,6 +1,6 @@
 import './products.scss';
 import {createProduct, Product} from "./product.interface";
-import {MDCDialog} from '@material/dialog';
+import {getDialog} from "./import.dialog";
 
 const products: Partial<Product>[] = [
     createProduct('p000012', 'Advance Rxjs'),
@@ -32,7 +32,6 @@ const dialogTemplate = `<div class="mdc-dialog">
   <div class="mdc-dialog__scrim"></div>
 </div>`;
 document.getElementById('products-dialog').innerHTML = dialogTemplate;
-const dialog = new MDCDialog(document.querySelector('.mdc-dialog'));
 
 
 const getLIElement = (p: Partial<Product>, index: number): HTMLLIElement => {
@@ -45,22 +44,22 @@ const getLIElement = (p: Partial<Product>, index: number): HTMLLIElement => {
 }
 
 const onClick = (event: Event) => {
-    console.log('Our products', products);
-    const ul = document.createElement('ul');
-    ul.setAttribute('id','my-prod-list')
-    products.forEach((p, i) => {
-        ul.appendChild(getLIElement(p, i))
+    getDialog().then(materialDialog => {
+        const dialog = new materialDialog.MDCDialog(document.querySelector('.mdc-dialog'));
+        console.log('Our products', products);
+        const ul = document.createElement('ul');
+        ul.setAttribute('id', 'my-prod-list')
+        products.forEach((p, i) => {
+            ul.appendChild(getLIElement(p, i))
+        })
+        document.getElementById('my-dialog-content').appendChild(ul);
+        dialog.open();
+        dialog.listen('MDCDialog:closed', () => {
+            const _u = document.getElementById('my-prod-list');
+            _u && document.getElementById('my-dialog-content').removeChild(_u);
+        });
 
     })
-    document.getElementById('my-dialog-content').appendChild(ul);
-    dialog.open();
-
-
-    dialog.listen('MDCDialog:closed', () => {
-        const _u = document.getElementById('my-prod-list');
-        _u && document.getElementById('my-dialog-content').removeChild(_u);
-    });
-
 }
 
 

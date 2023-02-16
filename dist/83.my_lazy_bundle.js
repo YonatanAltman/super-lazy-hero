@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksuper_lazy_hero=self.webpackChunksuper_lazy_hero||[]).push([[83],{83:(e,t,n)=>{n.r(t),n.d(t,{footerLogic:()=>r});var r=function(){return n.e(277).then(n.bind(n,3277)).then((function(e){return e.default.get("https://jsonplaceholder.typicode.com/users/1").then((function(e){return e.data}))}))}}}]);
